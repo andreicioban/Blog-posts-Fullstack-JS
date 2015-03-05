@@ -87,3 +87,4 @@ Ofcourse in order for scripts to work we would need the following dependencies:
   
 To install dependencies we use `npm install` command. After installing dependencies just run the `npm run-script watch`, and start developing your app, npm will take care of building everithing for you. You can even extend npm scripts to also run the tests, checking code style and alot of other tasks that we will explore further.
 
+  NPM is a complex tool that can save you a lot of time, we started with npm because all the tools we will explore next are managed using npm.
