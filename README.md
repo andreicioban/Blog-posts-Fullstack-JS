@@ -53,8 +53,37 @@
   - emulating devices and networks
   - Remote Debugging with Screencast
  
-## Automation tools
+## Automation and buid tools
 
   If you are not using automation tools you are working too hard.
   
+#### LiveReload 
+
+  - is a tool that monitors changes in the file system and refreshes the page in the browser as soon as you save a file.
+  - it can help save you F5 key, and a lot of time ofcourse.
+ 
+#### NPM
+  Npm comes bundled with nodeJS and at the origins is a packet manager for JavaScript, but it can be used as `task runner` or `build tool`. The feature that allows us to use `npm` in multiple ways is `npm run script`.
+  To initiate a `npm` configuration file we can use the `npm init` command, which will create for us the package.json file. 
+
+Let's see an example of `npm` scripts that will help us automate some of the front end processes:
+
+    "scripts": {
+      "buildJs": "browserify yourapp/scripts/app.js > dist/app.js",
+      "buildCss": "stylus public/styles/app.styl > dist/app.css",
+      "buildHtml": "jade public/html/index.jade > dist/index.html",
+      "build": "npm run buildJs && npm run buildCss && npm run buildHtml",
+      "watch": "watch 'npm run build' ."
+    }
+
+Ofcourse in order for scripts to work we would need the following dependencies:
+
+    "devDependencies": {
+      "browserify": "latest",
+      "stylus": "latest",
+      "jade": "latest",
+      "watch": "latest"
+    }
   
+To install dependencies we use `npm install` command. After installing dependencies just run the `npm run-script watch`, and start developing your app, npm will take care of building everithing for you. You can even extend npm scripts to also run the tests, checking code style and alot of other tasks that we will explore further.
+
