@@ -1,4 +1,4 @@
-# Modern developer toolbelt
+# Modern developer tool belt
 
   In today's web development ecosystem where a lot of programing and scripting languages rise from the necessity to simplify, extend or augment the consecrated languages. Where every day you can find a new framework. Where day by day the standards are adapted to fulfill the modern web applications needs. How do you stay up to date? How do you stay productive? 
   
@@ -6,7 +6,7 @@
   
 ## The command line
 
-  Everithing begins with the command line. Learn to use it efficiently and you'll have all the power at the tips of your fingers.
+  Everything begins with the command line. Learn to use it efficiently and you'll have all the power at the tips of your fingers.
   
 #### Shortcuts
 
@@ -20,7 +20,7 @@
    
    `Shift+Home / Shift+End` Selects from the cursor to start or end of the command.
    
-   `Ctrl+U` Deletes the command from start to the curssor position.
+   `Ctrl+U` Deletes the command from start to the cursor position.
    
    `Ctrl+K` Deletes from the cursor to the end of the line.
    
@@ -60,7 +60,7 @@
 #### [LiveReload](http://livereload.com/) 
 
   - is a tool that monitors changes in the file system and refreshes the page in the browser as soon as you save a file.
-  - it can help save you F5 key, and a lot of time ofcourse.
+  - it can help save you F5 key, and a lot of time of course.
  
 #### [NPM](https://www.npmjs.com/)
   Npm comes bundled with nodeJS and at the origins is a packet manager for JavaScript, but it can be used as `task runner` or `build tool`. The feature that allows us to use `npm` in multiple ways is `npm run script`.
@@ -77,7 +77,7 @@ Let's see an example of `npm` scripts that will help us automate some of the fro
       "watch": "watch 'npm run build' ."
     }
 
-Ofcourse in order for scripts to work we would need the following dependencies:
+Of course in order for scripts to work we would need the following dependencies:
 
     "devDependencies": {
       "browserify": "latest",
@@ -86,7 +86,7 @@ Ofcourse in order for scripts to work we would need the following dependencies:
       "watch": "latest"
     }
   
-To install dependencies we use `npm install` command. After installing dependencies just run the `npm run-script watch`, and start developing your app, npm will take care of building everithing for you. You can even extend npm scripts to also run the tests, checking code style and alot of other tasks that we will explore further.
+To install dependencies we use `npm install` command. After installing dependencies just run the `npm run-script watch`, and start developing your app, npm will take care of building everithing for you. You can even extend npm scripts to also run the tests, checking code style and a lot of other tasks that we will explore further.
 
   NPM is a complex tool that can save you a lot of time, we started with npm because all the tools we will explore next are managed using npm, or lets call them `npm helpers`.
 
@@ -94,7 +94,7 @@ Lets explore some helpfull `npm` packages:
 
 #### [jshint](https://www.npmjs.com/package/jshint)
 
-  `jshint` is a tool that detects errors and potential problems in JavaScript code. To use it you have to install the package: `npm installl -save-dev jshint` - the `-save-dev` flag is telling `npm` to add this package to `devDependecies` object in `package.json`.
+  `jshint` is a tool that detects errors and potential problems in JavaScript code. To use it you have to install the package: `npm install -save-dev jshint` - the `-save-dev` flag is telling `npm` to add this package to `devDependecies` object in `package.json`.
   
   After installing just add the next script to `npm` scripts:
   
@@ -104,7 +104,7 @@ Lets explore some helpfull `npm` packages:
   
 #### [eslint](https://www.npmjs.com/package/eslint)
 
-  `eslint` is a similar tool to `jshint`, the difference is that in case of `eslint` you can define your own rules, this making the tool more flexible. Ofcourse it comes with lots of predefined rules which you can configure to fulfill your needs.
+  `eslint` is a similar tool to `jshint`, the difference is that in case of `eslint` you can define your own rules, this making the tool more flexible. Of course it comes with lots of predefined rules which you can configure to fulfill your needs.
   
   Install the package just like `jshint` and add the following script to `npm`:
   
@@ -132,12 +132,12 @@ Lets explore some helpfull `npm` packages:
           "eqeqeq": 2
     }
 
-  Let's explain the configuration file. The `ecmaFeatures` reffer to `ES6` features, if you write plain javascript(`ES5`) then you can ignore this option. The `env` option define in which environments your app will run, this helps the plugin to detect specific global variable like `window` for browser or `require` for node. In addition to environment globals you can inform the plugin of your own global variables using `global` option. The most important option is `rules` here you can configure the default or your own rules, there are 3 levels of configuration:
+  Let's explain the configuration file. The `ecmaFeatures` refer to `ES6` features, if you write plain javascript(`ES5`) then you can ignore this option. The `env` option define in which environments your app will run, this helps the plugin to detect specific global variable like `window` for browser or `require` for node. In addition to environment globals you can inform the plugin of your own global variables using `global` option. The most important option is `rules` here you can configure the default or your own rules, there are 3 levels of configuration:
     0 - rule is disabled
     1 - rule is treated as warning
     2 - rule is treated as error
   
-  Ofcourse the rules can have complex objects as configuration, take for example `quotes` , the config object is passed to your confiuration rule and helps you to fine tune the rule.
+  Of course the rules can have complex objects as configuration, take for example `quotes` , the config object is passed to your confiuration rule and helps you to fine tune the rule.
   
   In most cases you will need to ignore some files that are still `work in progress` or for other reasons. Create a new file called `.eslintignore`, this file will tel the plugin which files to ignore and works similar to `gitignore`.
   
@@ -145,17 +145,17 @@ Lets explore some helpfull `npm` packages:
       Gruntfile.js
       out/**/*js
 
-  Similar to `eslint` , `jshint` can be configured using `.jshintrc` and `.jshintignore` files. And here comes the best part once configured you can integrate them with your editor (`SublimeText` and `Webstorm` tested) and check your code for mistakes in real time.
+  Similar to `eslint` , `jshint` can be configured using `.jshintrc` and `.jshintignore` files. And here comes the best part once configured you can integrate them with your editor (``Sublime Text` and `Webstorm` tested) and check your code for mistakes in real time.
   
 #### [precomit](https://www.npmjs.com/package/pre-commit)
 
-  Another usefull `npm` package is `pre-commit`. This tool is attaching a pre-commit hook to git and lets you run `npm scripts` whenever you make a git commit, the good part is that the commit will fail if the scripts you are runinning are failing fit error code 1. 
+  Another usefull `npm` package is `pre-commit`. This tool is attaching a pre-commit hook to git and lets you run `npm scripts` whenever you make a git commit, the good part is that the commit will fail if the scripts you are running are failing fit error code 1. 
   
   Imagine you can run code checking scripts before each commit and enforce a valid coding style. In most cases you will also want to run the test at this point and fail the commit if there are tests that are not passed. You're writing test for your code aren't you? 
   
   Lets see an example. Install the plugin: `npm install pre-commit`.
   
-  Is **very importan** to install this plugin after the `git` repo is initialised since it will need a git repo to hook the pre-commit.
+  Is **very important** to install this plugin after the `git` repo is initialised since it will need a git repo to hook the pre-commit.
   
   Now add the following object to `package.json`:
   
@@ -164,11 +164,11 @@ Lets explore some helpfull `npm` packages:
         "test"
       ]
 
-  This will tell the plugin which scripts to run before each `commit`, in our case we will check our code style and run the tests. If you try to make a `commit` at this point and one of the scripts will exit with `code 1`, which will hapen if the code style checker will report errors or if the test will fail. The `commit` will be aborted in this case, and you will need to fix the errors before commiting.
+  This will tell the plugin which scripts to run before each `commit`, in our case we will check our code style and run the tests. If you try to make a `commit` at this point and one of the scripts will exit with `code 1`, which will happen if the code style checker will report errors or if the test will fail. The `commit` will be aborted in this case, and you will need to fix the errors before committing.
   
   Some times you will need to commit *bad code* anyway, worry not, you can force a commit with `-no-verify` or `-n` flag.
   
-  Since we mentioned `testing` we will also mention some helpfull tools in this area.
+  Since we mentioned `testing` we will also mention some helpful tools in this area.
   
 #### [mocha](https://www.npmjs.com/package/mocha) - the simple test framework
   
@@ -235,9 +235,9 @@ Lets explore some helpfull `npm` packages:
   
   
   
-  Now running `gulp jshint` will produce the same efect as expected from previous experince with `npm` and `grunt`.
+  Now running `gulp jshint` will produce the same effect as expected from previous experience with `npm` and `grunt`.
   
-  The `grunt` and `gulp` tools are quite complex too and can accomplish a lage variety of tasks using plugins. Even the tools, from a developer perspective, are doing the same job they are quite diferen at the bottom. 
+  The `grunt` and `gulp` tools are quite complex too and can accomplish a large variety of tasks using plugins. Even the tools, from a developer perspective, are doing the same job they are quite different at the bottom. 
   
   Grunt is based on files with *configuration over code* paradigm at origins. 
   
@@ -245,11 +245,11 @@ Lets explore some helpfull `npm` packages:
   
 #### [Bower](https://www.npmjs.com/package/bower) - the browser package manager
   
-    `Bower` is a great tool for javascript dependencies that are running in browser. `Bower` depends on `Node` and `npm` and in some cases on `git` when bower packages are fetcehd directly from git.
+    `Bower` is a great tool for javascript dependencies that are running in browser. `Bower` depends on `Node` and `npm` and in some cases on `git` when bower packages are fetched directly from git.
   
     - `npm install -g bower` - bower is very simple to use and commands like `bower install <package-name> --save` or `bower uninstall <package-name>` should be familiar to you by now.
   
-  In many cases you will need to specify a diferent folder for your browser dependencies. This and many other configuration can be defined in `.bowerrc` file:
+  In many cases you will need to specify a different folder for your browser dependencies. This and many other configuration can be defined in `.bowerrc` file:
 
     {
       "directory": "public/bower_components"
@@ -261,20 +261,20 @@ Lets explore some helpfull `npm` packages:
   
 #### [Yeoman](http://yeoman.io/)  - the web scaffolding tool
   
-  With `yeomna` your project will be up and running in no time. Well not realy, but is a good starting point that is depending on the `generator` you're using. For example using a `yeoman` generator you can get all the tools we talked about in this post configured automatically and much more. You'll spend only a little more time to fine tune them and you have the building blocks of your project ready in a couple of minutes. 
+  With `yeomna` your project will be up and running in no time. Well not really, but is a good starting point that is depending on the `generator` you're using. For example using a `yeoman` generator you can get all the tools we talked about in this post configured automatically and much more. You'll spend only a little more time to fine tune them and you have the building blocks of your project ready in a couple of minutes. 
   
   Lets prove this theory:
   
   - `npm install -g yo` - since we already installed `grunt`, `bower` and `gulp` globally, we only need to instal `yoeman` at this point.
   - `npm install -g generator-angular-fullstack` - is one of the most popular `yeoman` generators.
   
-  As we want to demonstrate how easy it is to start an app from scrach, we will create another application leaving behind our work until now. 
+  As we want to demonstrate how easy it is to start an app from scratch, we will create another application leaving behind our work until now. 
 
   Change the path to a new folder and run the following command:
 
     yo angular-fullstack <yourappname>
 
-  At this point yhe generator will ask you about the development stack you prefer to use in your app. For example you can choose between `javascript` and `coffescript`, between `css`, `sass` etc. 
+  At this point the generator will ask you about the development stack you prefer to use in your app. For example you can choose between `javascript` and `coffescript`, between `css`, `sass` etc. 
   
   You will end with a screen like this one:
   
@@ -282,11 +282,11 @@ Lets explore some helpfull `npm` packages:
   
   Let the generator do its maginc and you have a new application with a lot of tools like `npm`, `grunt`, `bower`, `.gitignore` configured out of the box, as well as some frameworks like `Express`, `Mongoose`, `Angular` configured and working as starting point for your project.
   
-  Offcourse the generator we are using is more powerful and you can use it to generate other components like `endpoints`, `routes`, `services`, `directives` for the project, but you get the point.
+  Of course the generator we are using is more powerful and you can use it to generate other components like `endpoints`, `routes`, `services`, `directives` for the project, but you get the point.
   
 #### [Google's Web Starter Kit](https://developers.google.com/web/starter-kit/) - the boilerplate and tooling for multi-device development.
   
-  `Google's Web Starter Kit` is another great tool that hepls you get going with your project with a lot of features lieke:
+  `Google's Web Starter Kit` is another great tool that helps you get going with your project with a lot of features like:
   
   - Multi-device responsive boilerplate
   - Cross-device Synchronization
@@ -297,11 +297,15 @@ Lets explore some helpfull `npm` packages:
 
    `npm install -g yo generator-web-starter-kit` - requires Node, Gulp, Ruby and Sass
   
-  We will not get into details with this one because of the lack of experience of the writer with this tool, also because it wold become a little repetitve.
-  
+  We will not get into details with this one because of the lack of experience of the writer with this tool, also because it wold become a little repetitive.
+
+### Important notice
+
+  At the writing time the last stable version of node is *told* to be 0.12, but a lot of tools reviewed in this article will fail with this version. I recommand you to install node version 0.10, and use [nvm](https://github.com/creationix/nvm) to mange your node versions.
+
 ## Conclusion
   
-  This was a quick review of some great tools that come in handy to a modern web developer. It was intended to make the tools and their aplicability to be known to you and to get you a quick start. There's a lot of other tools or plugins related to the ones reviewed in this post that are waiting to be discovered.
+  This was a quick review of some great tools that come in handy to a modern web developer. It was intended to make the tools and their applicability to be known to you and to get you a quick start. There's a lot of other tools or plugins related to the ones reviewed in this post that are waiting to be discovered.
   
   Congratulations if you make it trough here, and you're willing to spend a little more time to master the tools presented above, then you are a less busy developer. 
   
