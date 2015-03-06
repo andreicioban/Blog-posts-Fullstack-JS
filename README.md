@@ -57,12 +57,12 @@
 
   If you are not using automation tools you are working too hard.
   
-#### LiveReload 
+#### [LiveReload](http://livereload.com/) 
 
   - is a tool that monitors changes in the file system and refreshes the page in the browser as soon as you save a file.
   - it can help save you F5 key, and a lot of time ofcourse.
  
-#### NPM
+#### [NPM](https://www.npmjs.com/)
   Npm comes bundled with nodeJS and at the origins is a packet manager for JavaScript, but it can be used as `task runner` or `build tool`. The feature that allows us to use `npm` in multiple ways is `npm run script`.
   
   To initiate a `npm` configuration file we can use the `npm init` command, which will create for us the package.json file. 
@@ -217,7 +217,7 @@ Lets explore some helpfull `npm` packages:
 
   Now running the command `grunt watch` grunt will watch over our app files and wil run `jshint` task whenever we save a file. 
   
-  #### [Gulp](https://www.npmjs.com/package/gulp) - the streaming build system
+#### [Gulp](https://www.npmjs.com/package/gulp) - the streaming build system
   
     - `npm install -g gulp` install gulp globaly.
     - `npm install gulp-jshint` - just like grunt gulp is using plugins to accomplish different tasks.
@@ -243,7 +243,7 @@ Lets explore some helpfull `npm` packages:
   
   Gulp is based on streams with *code over configuration* paradigm at origins, which make it gulp a little faster that grunt at building tasks since it doesn't need to write temporary files to disk.  
   
-  #### [Bower](https://www.npmjs.com/package/bower) - the browser package manager
+#### [Bower](https://www.npmjs.com/package/bower) - the browser package manager
   
     `Bower` is a great tool for javascript dependencies that are running in browser. `Bower` depends on `Node` and `npm` and in some cases on `git` when bower packages are fetcehd directly from git.
   
@@ -259,7 +259,7 @@ Lets explore some helpfull `npm` packages:
   
 ## Scaffolding and Boilerplate
   
-  #### [Yeoman](http://yeoman.io/)  - the web scaffolding tool
+#### [Yeoman](http://yeoman.io/)  - the web scaffolding tool
   
   With `yeomna` your project will be up and running in no time. Well not realy, but is a good starting point that is depending on the `generator` you're using. For example using a `yeoman` generator you can get all the tools we talked about in this post configured automatically and much more. You'll spend only a little more time to fine tune them and you have the building blocks of your project ready in a couple of minutes. 
   
@@ -284,7 +284,7 @@ Lets explore some helpfull `npm` packages:
   
   Offcourse the generator we are using is more powerful and you can use it to generate other components like `endpoints`, `routes`, `services`, `directives` for the project, but you get the point.
   
-  #### [Google's Web Starter Kit](https://developers.google.com/web/starter-kit/) - the boilerplate and tooling for multi-device development.
+#### [Google's Web Starter Kit](https://developers.google.com/web/starter-kit/) - the boilerplate and tooling for multi-device development.
   
   `Google's Web Starter Kit` is another great tool that hepls you get going with your project with a lot of features lieke:
   
@@ -299,7 +299,7 @@ Lets explore some helpfull `npm` packages:
   
   We will not get into details with this one because of the lack of experience of the writer with this tool, also because it wold become a little repetitve.
   
-  ## Conclusion
+## Conclusion
   
   This was a quick review of some great tools that come in handy to a modern web developer. It was intended to make the tools and their aplicability to be known to you and to get you a quick start. There's a lot of other tools or plugins related to the ones reviewed in this post that are waiting to be discovered.
   
