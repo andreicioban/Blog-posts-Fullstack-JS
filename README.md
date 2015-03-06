@@ -177,8 +177,70 @@ Lets explore some helpfull `npm` packages:
 #### [istanbul](https://www.npmjs.com/package/istanbul) -  a JS code coverage tool.
 
 - `npm install istanbul` , generates realy nice reports regarding the code coverage.
- 
+
+![istanbul report](https://drive.google.com/file/d/0B0ro1Nj6IFdVa1NoUWNvSlpxbGc/view?usp=sharing) 
+
   We will use both tools in one script since both are related to teststing:
 
       "test": "node_modules/istanbul/lib/cli.js cover node_modules/.bin/_mocha test/**/*.js"
+  
+#### [Grunt](https://www.npmjs.com/package/grunt) - a javascript task runner
+
+  - `npm install -g grunt grunt-cli` - you have to install globally grunt and grunt-cli which will add to your system path the grunt command.
+   
+  Grunt works using plugins so before configuring it lets install some plugins:
+
+  - `npm install grunt-contrib-watch grunt-contrib-jshint` - will install two simple plugins that will accomplish the same job as the `npm` plugins used by now.
+   
+  Configuration files again. Create a file named `Gruntfile.js` in your project root. This file will look like this:
+
+      module.exports = function(grunt) {
+      
+        grunt.initConfig({
+          jshint: {
+            files: ['Gruntfile.js', 'yourapp/scripts/*.js', 'test/**/*.js'],
+            options: {
+              globals: {
+                config: true
+              }
+            }
+          },
+          watch: {
+            files: ['<%= jshint.files %>'],
+            tasks: ['jshint']
+          }
+        });
+      
+        grunt.loadNpmTasks('grunt-contrib-jshint');
+        grunt.loadNpmTasks('grunt-contrib-watch');
+      };
+
+  Now running the command `grunt watch` grunt will watch over our app files and wil run `jshint` task whenever we save a file. 
+  
+  #### [Gulp](https://www.npmjs.com/package/gulp) - a streaming build system
+  
+    - `npm install -g gulp` install gulp globaly.
+    - `npm install gulp-jshint` - just like grunt gulp is using plugins to accomplish different tasks.
+  
+  Create the configuration file named `gulpfile.js`. The file will look like this:
+  
+      var gulp = require("gulp");
+      var jshint = require("gulp-jshint");
+      
+      gulp.task("jshint", function() {
+       gulp.src("yourapp/scripts/*.js")
+       .pipe(jshint())
+       .pipe(jshint.reporter('default'));
+      });
+  
+  
+  
+  Now running `gulp jshint` will produce the same efect as expected from previous experince with `npm` and `grunt`.
+  
+  The `grunt` and `gulp` tools are quite complex too and can accomplish a lage variety of tasks using plugins. Even the tools, from a developer perspective, are doing the same job they are quite diferen at the bottom. 
+  
+  Grunt is based on files with *configuration over code* paradigm at origins. 
+  
+  Gulp is based on streams with *code over configuration* paradigm at origins, which make it gulp a little faster that grunt at building tasks since it doesn't need to write temporary files to disk.  
+  
   
