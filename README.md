@@ -257,6 +257,8 @@ Lets explore some helpfull `npm` packages:
 
   Just like `npm` , `bower` will create a `bower.json` file. Here will be saved all the dependencies of your project in the same manner as in `npm` case.
   
+## Scaffolding and Boilerplate
+  
   #### [Yeoman](http://yeoman.io/)  - the web scaffolding tool
   
   With `yeomna` your project will be up and running in no time. Well not realy, but is a good starting point that is depending on the `generator` you're using. For example using a `yeoman` generator you can get all the tools we talked about in this post configured automatically and much more. You'll spend only a little more time to fine tune them and you have the building blocks of your project ready in a couple of minutes. 
@@ -282,4 +284,24 @@ Lets explore some helpfull `npm` packages:
   
   Offcourse the generator we are using is more powerful and you can use it to generate other components like `endpoints`, `routes`, `services`, `directives` for the project, but you get the point.
   
+  #### [Google's Web Starter Kit](https://developers.google.com/web/starter-kit/) - the boilerplate and tooling for multi-device development.
+  
+  `Google's Web Starter Kit` is another great tool that hepls you get going with your project with a lot of features lieke:
+  
+  - Multi-device responsive boilerplate
+  - Cross-device Synchronization
+  - Built in HTTP Server
+  - Performance optimization
+  
+  There is even a yeoman generator for Google's Web Starter Kit:
+
+   `npm install -g yo generator-web-starter-kit` - requires Node, Gulp, Ruby and Sass
+  
+  We will not get into details with this one because of the lack of experience of the writer with this tool, also because it wold become a little repetitve.
+  
+  ## Conclusion
+  
+  This was a quick review of some great tools that come in handy to a modern web developer. It was intended to make the tools and their aplicability to be known to you and to get you a quick start. There's a lot of other tools or plugins related to the ones reviewed in this post that are waiting to be discovered.
+  
+  Congratulations if you make it trough here, and you're willing to spend a little more time to master the tools presented above, then you are a less busy developer. 
   
