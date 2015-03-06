@@ -170,11 +170,11 @@ Lets explore some helpfull `npm` packages:
   
   Since we mentioned `testing` we will also mention some helpfull tools in this area.
   
-#### [mocha](https://www.npmjs.com/package/mocha) - a simple test framework
+#### [mocha](https://www.npmjs.com/package/mocha) - the simple test framework
   
 - `npm install mocha` , we will not get into details here since is a complex topic.
 
-#### [istanbul](https://www.npmjs.com/package/istanbul) -  a JS code coverage tool.
+#### [istanbul](https://www.npmjs.com/package/istanbul) -  the JS code coverage tool.
 
 - `npm install istanbul` , generates realy nice reports regarding the code coverage.
 
@@ -184,7 +184,7 @@ Lets explore some helpfull `npm` packages:
 
       "test": "node_modules/istanbul/lib/cli.js cover node_modules/.bin/_mocha test/**/*.js"
   
-#### [Grunt](https://www.npmjs.com/package/grunt) - a javascript task runner
+#### [Grunt](https://www.npmjs.com/package/grunt) - the javascript task runner
 
   - `npm install -g grunt grunt-cli` - you have to install globally grunt and grunt-cli which will add to your system path the grunt command.
    
@@ -217,7 +217,7 @@ Lets explore some helpfull `npm` packages:
 
   Now running the command `grunt watch` grunt will watch over our app files and wil run `jshint` task whenever we save a file. 
   
-  #### [Gulp](https://www.npmjs.com/package/gulp) - a streaming build system
+  #### [Gulp](https://www.npmjs.com/package/gulp) - the streaming build system
   
     - `npm install -g gulp` install gulp globaly.
     - `npm install gulp-jshint` - just like grunt gulp is using plugins to accomplish different tasks.
@@ -242,5 +242,19 @@ Lets explore some helpfull `npm` packages:
   Grunt is based on files with *configuration over code* paradigm at origins. 
   
   Gulp is based on streams with *code over configuration* paradigm at origins, which make it gulp a little faster that grunt at building tasks since it doesn't need to write temporary files to disk.  
+  
+  #### [Bower](https://www.npmjs.com/package/bower) - the browser package manager
+  
+    `Bower` is a great tool for javascript dependencies that are running in browser. `Bower` depends on `Node` and `npm` and in some cases on `git` when bower packages are fetcehd directly from git.
+  
+    - `npm install -g bower` - bower is very simple to use and commands like `bower install <package-name> --save` or `bower uninstall <package-name>` should be familiar to you by now.
+  
+  In many cases you will need to specify a diferent folder for your browser dependencies. This and many other configuration can be defined in `.bowerrc` file:
+
+    {
+      "directory": "public/bower_components"
+    }
+
+  Just like `npm` , `bower` will create a `bower.json`. Here will be saved all the dependencies of your project in the same manner as in `npm` case.
   
   
