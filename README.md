@@ -255,6 +255,31 @@ Lets explore some helpfull `npm` packages:
       "directory": "public/bower_components"
     }
 
-  Just like `npm` , `bower` will create a `bower.json`. Here will be saved all the dependencies of your project in the same manner as in `npm` case.
+  Just like `npm` , `bower` will create a `bower.json` file. Here will be saved all the dependencies of your project in the same manner as in `npm` case.
+  
+  #### [Yeoman](http://yeoman.io/)  - the web scaffolding tool
+  
+  With `yeomna` your project will be up and running in no time. Well not realy, but is a good starting point that is depending on the `generator` you're using. For example using a `yeoman` generator you can get all the tools we talked about in this post configured automatically and much more. You'll spend only a little more time to fine tune them and you have the building blocks of your project ready in a couple of minutes. 
+  
+  Lets prove this theory:
+  
+  - `npm install -g yo` - since we already installed `grunt`, `bower` and `gulp` globally, we only need to instal `yoeman` at this point.
+  - `npm install -g generator-angular-fullstack` - is one of the most popular `yeoman` generators.
+  
+  As we want to demonstrate how easy it is to start an app from scrach, we will create another application leaving behind our work until now. 
+
+  Change the path to a new folder and run the following command:
+
+    yo angular-fullstack <yourappname>
+
+  At this point yhe generator will ask you about the development stack you prefer to use in your app. For example you can choose between `javascript` and `coffescript`, between `css`, `sass` etc. 
+  
+  You will end with a screen like this one:
+  
+  ![yeoman generator](https://drive.google.com/file/d/0B0ro1Nj6IFdVeENac094LWRJcjg/view?usp=sharing) 
+  
+  Let the generator do its maginc and you have a new application with a lot of tools like `npm`, `grunt`, `bower`, `.gitignore` configured out of the box, as well as some frameworks like `Express`, `Mongoose`, `Angular` configured and working as starting point for your project.
+  
+  Offcourse the generator we are using is more powerful and you can use it to generate other components like `endpoints`, `routes`, `services`, `directives` for the project, but you get the point.
   
   
