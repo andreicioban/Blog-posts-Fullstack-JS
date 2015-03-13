@@ -32,17 +32,19 @@
   
 ### [cmder](http://bliker.github.io/cmder/) for Windows
 
-  - replace your boring windows cmd.
+  - replace your boring windows cmd, with this amazing nice looking console emulator, that is totally portable and comes with a lot of `Unix` commands like `git` or `cat` ready in `PATH`.
 
 ### [iTerm2](http://iterm2.com/) for Mac
 
- - autocomplete, paste history, replay command history, Moseless copy.
+ - The successor `iTerm` comes with great features like autocomplete, paste history, replay command history, mouseless copy. You will find `iTerm`  features very helpful .
 
 ### [Guake](http://guake.org/) for Linux
 
+ - `Guake` is a top-down terminal for `Gnome`, since is for linux and all commands are supported out of the box, this console supports customizations from appearance point of view.
+
 ### [Prezto](https://github.com/sorin-ionescu/prezto) — Instantly Awesome Zsh
 
- - the configuration framework for Zsh. Themes, autocomplete, aliases. 
+ - the configuration framework for `Zsh`. It extends the command line interface environment with autocomplete, aliases, and supports themes.
  
 ## Chrome developer tools
 ![Chrome dev tools](https://drive.google.com/file/d/0B0ro1Nj6IFdVbDg2S25YRFBqY1k/view?usp=sharing)
