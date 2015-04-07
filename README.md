@@ -55,7 +55,7 @@
   - emulating devices and networks
   - Remote Debugging with Screencast
  
-## Automation and buid tools
+## Automation and build tools
 
   If you are not using automation tools you are working too hard.
   
