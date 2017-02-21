@@ -1,8 +1,8 @@
-# Javascript basic styleguide
+# Javascript basic coding style guideline
 
 `Work in progress ...` 
 
-This is one article from a series that covers all front end basic style guide:
+This post is part of the "Basic Frontend Coding Style Guide" which will cover all front end basic style guide, and some tools to help us with automation:
 
 * [HTML/CSS basic style guide](https://assist-software.net/blog)
 * Javascript basic styleguide
@@ -10,9 +10,20 @@ This is one article from a series that covers all front end basic style guide:
 * [Tools to enforce the JS guidelines](https://assist-software.net/blog)
 * [Git hooks for automation](https://assist-software.net/blog)
 
-This is just another article in the wild web about guidelines.
-From my experience all the discussions around style guides are mostly subjective, and a matter of prefference/habit. We have different backgrounds or learning paths, ...
-This is wanted to be just a basic styleguide, which is generally valid for both plain Javascript and ES6.
+## The burden of a dynamic environment
+I'm talking about software development ofcourse. How can we maintain consistency in long term projects? Given that, people will come and go, projects will come and go, frameworks will come and gues what, they will be phased out. Well following the same style guide will be a good start, and will provide consistency across projects, or at least across one project.
+From my experience all the discussions around style guidelines are mostly subjective, and a matter of prefference/habit. We have different backgrounds or learning paths and this models our perception about what we consider to be readable or easy to reason about. 
+
+> Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
+
+_Martin Fowler_
+
+The machines are all the same, and they will understand the same thing from your code, no matter how is written. We are humans and we are all different and that's a good thing. So when it comes to writing readable code for humans there is no one set of rules to fit them all. So lets think about the guidelines below more as a convention, and less as a best practice.
+
+## The goal
+
+* To be just a basic styleguide, which is generally valid for both plain Javascript and ES6.
+* To have a very low friction with the process of learning/adaptation.
 
 ## The "Rules":
 
@@ -99,4 +110,22 @@ var numPixels = (config && config.pixels)
 
 //Wrong:
 var numPixels = (config && config.pixels) ? config.pixels : 100;
+```
+
+You can easely separte the condition and the possible outcomes.
+
+### Space infix operators
+
+```js
+var x=2;
+var square=x*x; 
+
+var x = 2;
+var square = x * x;
+```
+
+### Commas should have a space after
+
+```js
+Math.max(10, 20);
 ```
