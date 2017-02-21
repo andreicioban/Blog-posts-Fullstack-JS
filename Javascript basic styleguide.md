@@ -30,14 +30,14 @@ The machines are all the same, and they will understand the same thing from your
 ### Use 2 spaces for indentation.
 
 ```js
-// Right:
+// ok:
 function add(a, b) {
-  return a+b;
+  return a + b;
 }
 
-// Wrong:
+// avoid:
 function add(a, b) {
-    return a+b;
+    return a + b;
 }
 ```
 
@@ -47,18 +47,18 @@ We all have different prefferences when comes to text editors and IDE's, but con
 Unused variables will polute the context and will make the code harder to reason about.
 
 ### Use semicolons
-I know is old style, but we sometimes work on legacy code, and in some cases can provide some information about where a statement ends.
+I know is old style, but we sometimes maintain legacy code, and in some cases can provide some information about where a statement ends.
 
 ### Write each declaration in its own statement.
 
-```
-// Right:
+```js
+// ok:
 var userPermissions = require('db').Permissions(currentUser);
 var hasAccess = require('security').AccessFactory(userPermissions);
 var errors = requre('errors').security;
 
  
-// Wrong:
+// avoid:
 var userPermissions = require('db').Permissions(currentUser), hasAccess = require('security').AccessFactory(userPermissions), errors = requre('errors').security;
 
 // or:
@@ -73,10 +73,10 @@ I made the above example a bit more complex only to emphasize the fact that in a
 ### Use single quotes, unless you are writing JSON.
 
 ```js
-// Right
+// ok:
 var message = 'Okay';
 
-//Wrong
+// avoid:
 var message = "Im a bad example";
 ```
 
@@ -88,12 +88,12 @@ I have no practical reason for this one, is just for consistency.
 var isAdmin = true;
 var stupidMistake = 1;
 
-//Right
+// ok:
 if(isAdmin === stupidMistake) {
   launchNuke();
 }
 
-//Wrong
+// avoid:
 if(isAdmin == stupidMistake) {
   launchNuke(); // congrat's you just stared WWx
 }
@@ -103,12 +103,12 @@ The example above sucks, i need a better one.
 ### Use multi-line ternary operator
 
 ```js
-//Right:
+// ok:
 var numPixels = (config && config.pixels)
  ? config.pixels
  : 100;
 
-//Wrong:
+// avoid:
 var numPixels = (config && config.pixels) ? config.pixels : 100;
 ```
 
@@ -117,15 +117,49 @@ You can easely separte the condition and the possible outcomes.
 ### Space infix operators
 
 ```js
-var x=2;
-var square=x*x; 
-
+// ok:
 var x = 2;
 var square = x * x;
+
+// avoid:
+var x=2;
+var square=x*x; 
 ```
+So the code doesn't look like a cryptic message, and also you can navigate more easely using only the keyboard.
 
 ### Commas should have a space after
 
 ```js
-Math.max(10, 20);
+// ok:
+var max = Math.max(10, 20);
+var magicNumbers = [1, 4, 6, 88];
+var users = getUsers(companyId, role);
+
+// avoid:
+var max = Math.max(10,20);
+var magicNumbers = [1,4,6,88];
+var users = getUsers(companyId,role);
 ```
+
+### Else statements should be on the same line as their curly braces.
+
+```js
+// ok:
+if(hasAccess) {
+  executeAction();
+} else {
+  doNothing();
+}
+
+// avoid:
+if(hasAccess) {
+  executeAction();
+} 
+else {
+  doNothing();
+}
+```
+
+Is easier to follow the code path. In some cases, based on the lines visible in the view port and your boredom, you may suppose there is no else statement, if the closed curly brace is alone on the line.
+
+### Always prefix custom globals
