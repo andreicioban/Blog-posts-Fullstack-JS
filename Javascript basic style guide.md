@@ -163,3 +163,11 @@ else {
 Is easier to follow the code path. In some cases, based on the lines visible in the view port and your boredom, you may suppose there is no else statement, if the closed curly brace is alone on the line.
 
 ### Always prefix custom globals
+```js
+// ok:
+alert("Hello");
+window.
+
+// avoid:
+
+```
